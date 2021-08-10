@@ -1,0 +1,16 @@
+.btc-o-input-helper {
+  &__helper {
+    font-size: 12px;
+    height: 16px;
+    width: 100%;
+    margin-left: 15px;
+    line-height: normal;
+  }
+
+  &--error {
+    @extend .btu-states-error;
+    .btc-o-input-helper__helper {
+      color: $error-color !important;
+    }
+  }
+}

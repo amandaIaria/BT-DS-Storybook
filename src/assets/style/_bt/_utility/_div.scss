@@ -1,0 +1,41 @@
+.btu-display {
+  &--grid {
+    display: grid;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--inline {
+    display: inline;
+  }
+
+  &--none {
+    display: none;
+  }
+}
+
+.btu-position {
+  &--fixed {
+    position: fixed;
+  }
+
+  &--sticky {
+    position: sticky;
+  }
+}
+
+.btu-float {
+  &--left {
+    float: left;
+  }
+
+  &--right {
+    float: right;
+  }
+
+  &--none {
+    float: none;
+  }
+}

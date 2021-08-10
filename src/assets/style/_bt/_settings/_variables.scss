@@ -1,0 +1,430 @@
+// Theme Variables
+// Nameing convention
+// $bt-{page}-{place}-{element}
+// These are all the variables in the DS. Properties have become variables to help with themeing.
+
+// Basics
+$bt-basics-body-color: map-get($map: $colors, $key: 'flatblack') !default;
+$bt-basics-body-margin: 0 !default;
+$bt-basics-body-padding: 0 !default;
+$bt-basics-material-icons: -4px !default;
+$bt-basics-ul-margin: 0 !default;
+$bt-basics-ul-padding-left: 16px !default;
+$bt-basics-ul-li-margin-bottom: 8px !default;
+$bt-basics-margin: $margin !default;
+
+// Buttons
+$bt-button-password-icon-background: transparent !default;
+$bt-button-password-icon-focus: map-get($map: $colors, $key: 'grey1' ) !default;
+$bt-button-password-icon-font-size: 37px !default;
+$bt-button-password-icon-color: map-get($map: $colors, $key: 'grey1' ) !default;
+$bt-button-password-icon-margin: 0 !default;
+$bt-button-password-icon-padding: 0 !default;
+$bt-button-flat-border-color: transparent !default;
+$bt-button-flat-background-color: none !default;
+$bt-button-flat-border-radius: 0 !default;
+$bt-button-ghost-focus: map-get($map: $colors, $key: 'white' )  !default;
+$bt-button-ghost-background-color: none !default;
+$bt-button-loader-solid: map-get($map: $colors, $key: 'green1' )  !default;
+$bt-button-loader-flat: map-get($map: $colors, $key: 'green1' )  !default;
+$bt-button-loader-color: map-get($map: $colors, $key: 'green1' )  !default;
+$bt-button-withicon-padding-right: 16px !default;
+$bt-button-withicon-padding-left: 16px !default;
+$bt-button-remove-color: map-get($map: $colors, $key: 'white' )  !default;
+$bt-button-remove-background: map-get($map: $colors, $key: 'red1' )  !default;
+$bt-button-remove-border-color: map-get($map: $colors, $key: 'red1' )  !default;
+$bt-button-reset-color: map-get($map: $colors, $key: 'red1' )  !default;
+$bt-button-reset-focus-color: map-get($map: $colors, $key: 'white' )  !default;
+$bt-button-reset-focus-background: map-get($map: $colors, $key: 'red1' )  !default;
+$bt-button-reset-focus-border-color: map-get($map: $colors, $key: 'red1' )  !default;
+$bt-button-bordersize: $bt-border-default !default;
+$bt-button-padding: 8px !default;
+$bt-button-borderradius: 5px !default;
+$bt-button-labelfontsize: 14px !default;
+$bt-button-label-line-size: 24px !default;
+$bt-button-mbfix: 4px !default;
+$bt-button-size-wxs: 160px !default;
+$bt-button-size-wsm: 200px !default;
+$bt-button-size-wmd: 240px !default;
+$bt-button-size-wlg: 280px !default;
+$bt-button-size-pxs: 0 - $bt-border-default-size !default;
+$bt-button-size-psm: 4px - $bt-border-default-size !default;
+$bt-button-size-pmd: 8px - $bt-border-default-size !default;
+$bt-button-size-plg: 12px - $bt-border-default-size !default;
+$bt-button-size-pdefault: 12px - $bt-border-default-size !default;
+$bt-button-password-icon-color: map-get($borderRadius, 'grey1') !default;
+$bt-button-password-icon-color-active: $active-color !default;
+$bt-button-size-default: auto !default;
+$bt-flat-button-hover: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-button-text-transform: uppercase !default;
+$bt-button-font-weight: bold !default;
+$bt-button-mixinflat-background: transparent !default;
+$bt-button-mixinsolid-bs: none !default;
+$bt-button-mixinghost-background: transparent !default;
+$bt-button-sizexs-fs: 12px !default;
+$bt-button-sizexs-lh: 24px !default;
+$bt-button-sizesm-fs: 12px !default;
+$bt-button-sizesm-lh: 24px !default;
+
+// Captions
+$bt-caption-error-color: $error-color !default;
+$bt-caption-error-font-style: italic !default;
+
+
+// Iframe
+$bt-iframe-contbtner-padding: 56% !default;
+$bt-iframe-contbtner-width: 100% !default;
+$bt-iframe-video-width: 100% !default;
+$bt-iframe-video-height: 100% !default;
+
+// Images
+$bt-image-imageid-background: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-image-imageid-padding: 4px !default;
+$bt-image-imagelink-background: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-image-imagelink-padding: 4px !default;
+$bt-image-imagelink-hover-background: $active-color !default;
+$bt-image-small-width: 100px !default;
+$bt-image-medium-width: 300px !default;
+$bt-image-large-width: 600px !default;
+$bt-image-heroimage-width: 1200px !default;
+$bt-image-heroimage-margintop: -16px !default;
+$bt-image-fixedlarge-height: 600px !default;
+$bt-image-fixedmedium-height: 300px !default;
+$bt-image-fixedsmall-height: 100px !default;
+$bt-image-fixedhero-height: 400px !default;
+
+// Links
+$bt-link-color: $link-color !default;
+$bt-link-active-color: map-get($map: $colors, $key: 'blue1' )  !default;
+$bt-link-socialbar-padding: 0 !default;
+$bt-link-socialbar-paddingtop: 16px !default;
+$bt-link-socialbrands-fontsize: 32px !default;
+$bt-link-socialbrands-color: map-get($map: $colors, $key: 'grey1' )  !important !default;
+$bt-link-linkedin-hover-color: #0077b5 !important !default;
+$bt-link-facebook-hover-color: #3b5998 !important !default;
+$bt-link-youtube-hover-color: #ff0000 !important !default;
+$bt-link-twitter-hover-color: #1da1f2 !important !default;
+$bt-link-instagram-hover-color: #ffdc80 !important !default;
+$bt-link-light-color: map-get($map: $colors, $key: 'white' )  !default;
+$bt-link-light-active-color: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-link-icon-padding: $margin /2 !default;
+
+// Label
+$bt-labels-mixineffectunderline-border: none !default;
+$bt-labels-mixincontbtner-fs: 12px !default;
+$bt-labels-mixincontbtner-lh: 16px !default;
+$bt-labels-floating-fw: 400 !default;
+$bt-labels-floating-left: 16px !default;
+$bt-labels-floating-top: 16px !default;
+$bt-labels-floating-width: calc(100% - 17px) !default;
+$bt-labels-contbtner-padding: 0 8px !default;
+$bt-labels-contbtner-br: map-get($borderRadius, 'one') !default;
+$bt-labels-contbtner-bsb: 0 0 0px 1px  !default;
+$bt-labels-contbtner-bsu: 0px -1px 0px 0px  !default;
+$bt-labels-contbtner-sfy: -8px !default;
+$bt-labels-contbtner-sfx: -8px !default;
+$bt-labels-contbtner-sfs: 0.75 !default;
+
+// Lists
+$bt-lists-unordered-position: outside !default;
+$bt-lists-unordered-padding: 0 !default;
+$bt-lists-ordered-position: outside !default;
+$bt-lists-ordered-padding: 0 !default;
+$bt-lists-ordered-margin-left: -6px !default;
+$bt-lists-nostyle-marginleft: 0 !default;
+
+// Loader
+$bt-loader-default-height: 24px !default;
+$bt-loader-default-width: 24px !default;
+$bt-loader-sm-height: 12px !default;
+$bt-loader-sm-width: 12px !default;
+$bt-loader-border-radius: map-get($borderRadius, 'three') !default;
+
+// Linemovement
+$bt-linemovement-border-color: map-get($map: $colors, $key: 'green1' )  !default;
+$bt-linemovement-border-width: 2px !default;
+
+// Table
+$bt-table-col-bordercollapse: collapse !default;
+$bt-table-col-padding: 16px !default;
+$bt-table-mobilebg-background-ff: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.57) 57%, rgba(255,255,255,0.0) 75%, rgba(255,255,255,1) 100%) !default; /* FF3.6-15 */
+$bt-table-mobilebg-background-chrome: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.0) 57%,rgba(255,255,255,0.0) 75%,rgba(255,255,255,1) 100%) !default; /* Chrome10-25,Safari5.1-6 */
+$bt-table-mobilebg-background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.0) 75%, white 100%) !default;
+$bt-table-mobilebg-background-ie: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ) !default; /* IE6-9 */
+$bt-table-typespan-background: $active-color !default;
+$bt-table-typespan-color: map-get($map: $colors, $key: 'white' )  !default;
+$bt-table-typespan-fontsize: 14px !default;
+$bt-table-typespan-lineheight: 24px !default;
+$bt-table-typespan-padding: 2px 8px !default;
+$bt-table-title-color: $active-color !default;
+$bt-table-title-fontsize: 14px !default;
+$bt-table-title-lineheight: 24px !default;
+$bt-table-title-padding: 16px 0 !default;
+$bt-table-title-width: auto !default;
+$bt-table-date-width: 88px !default;
+$bt-table-date-textalign: right !default;
+$bt-table-datespan-color: map-get($borderRadius, 'grey1') !default;
+$bt-table-datespan-fontsize: 12px !default;
+$bt-table-datespan-lineheight: 16px !default;
+$bt-table-view-width: 49px !default;
+$bt-table-viewspan-fontsize: 10px !default;
+$bt-table-viewspan-color: $active-color !default;
+$bt-table-viewspan-marginright: 4px !default;
+$bt-table-viewspan-texttransform: uppercase !default;
+$bt-table-viewspan-i-color: $active-color !default;
+$bt-table-viewspan-i-fontsize: 24px !default;
+$bt-table-bordered: thin solid map-get($borderRadius, 'grey1') !default;
+$bt-table-clickable-background: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-table-documents-width: 832px !default;
+$bt-table-documentstype-width: 24px !default;
+$bt-table-documentstypespan-background: $active-color !default;
+$bt-table-documentstypespan-color: map-get($map: $colors, $key: 'white' )  !default;
+$bt-table-documentstypespan-fontsize: 14px !default;
+$bt-table-documentstypespan-lineheight: 24px !default;
+$bt-table-documentstypespan-padding: 2px 8px !default;
+$bt-table-documentstitle-color: $active-color !default;
+$bt-table-documentstitle-fontsize: 14px !default;
+$bt-table-documentstitle-lineheight: 24px !default;
+$bt-table-documentstitle-padding: 16px 0 !default;
+$bt-table-documentstitle-width: auto !default;
+$bt-table-documentsdate-width: 88px !default;
+$bt-table-documentsdate-textalign: right !default;
+$bt-table-documentsdatespan-color: map-get($borderRadius, 'grey1') !default;
+$bt-table-documentsdatespan-fontsize: 12px !default;
+$bt-table-documentsdatespan-lineheight: 16px !default;
+$bt-table-documentsview-width: 49px !default;
+$bt-table-documentsviewspan-fontsize: 10px !default;
+$bt-table-documentsviewspan-color: $active-color !default;
+$bt-table-documentsviewspan-marginright: 4px !default;
+$bt-table-documentsviewspan-i-color: $active-color !default;
+$bt-table-documentsviewspan-i-fontsize: 24px !default;
+$bt-table-traditionalheadcol-color: map-get($borderRadius, 'grey1') !default;
+$bt-table-traditionalheadcol-fontweight: 400 !default;
+$bt-table-traditionalheadcol-fontsize: 14px !default;
+$bt-table-traditionalheadcol-lineheight: 24px !default;
+$bt-table-traditionalbodycol-fontweight: 400px !default;
+$bt-table-traditionalbodycol-fontsize: 12px !default;
+$bt-table-traditionalbodycol-lineheight: 16px !default;
+
+// Breadcrumbs
+$bt-breadcrumbs-crumb-content: '\e5cc' !default;
+$bt-breadcrumbs-crumb-fontfamily: 'Material Icons', sans-serif !default;
+$bt-breadcrumbs-crumb-color: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-breadcrumbs-smallcrumb-fontsize: 12px !default;
+$bt-breadcrumbs-smallcrumb-lineheight: 16px !default;
+$bt-breadcrumbs-smallcrumbafter-fontsize: 22px !default;
+$bt-breadcrumbs-mediumcrumb-fontsize: 14px !default;
+$bt-breadcrumbs-mediumcrumb-lineheight: 24px !default;
+$bt-breadcrumbs-mediumcrumbafter-fontsize: 22px !default;
+$bt-breadcrumbs-largecrumb-fontsize: 18px !default;
+$bt-breadcrumbs-largecrumb-lineheight: 32px !default;
+$bt-breadcrumbs-largecrumbafter-fontsize: 45px !default;
+
+// Input
+$bt-inputfield-customcalendar-background: map-get($map: $colors, $key: 'white' )  !default;
+$bt-inputfield-customcalendar-color: $body-color !default;
+$bt-inputfield-customcalendar-maxwidth: 312px !default;
+$bt-inputfield-customcalendar-padding: 16px !default;
+$bt-inputfield-customcalendar-margin: 16px !default;
+$bt-inputfield-customcalendar-margintop: -40px !default;
+$bt-inputfield-customcalendar-width: 100% !default;
+$bt-inputfield-customcalendar-zindex: 77 !default;
+$bt-inputfield-customcalendar-boxshadow: map-get($boxShadow, 'one') !default;
+$bt-inputfield-customcalendarday-height: 32px !default;
+$bt-inputfield-customcalendarday-width: 32px !default;
+$bt-inputfield-customcalendarda-padding: 0 !default;
+$bt-inputfield-customcalendarda-margin: 0 !default;
+$bt-inputfield-customcalendarday-borderradius: map-get($borderRadius, 'three') !default;
+$bt-inputfield-customcalendardayactive-background: $active-color !default;
+$bt-inputfield-customcalendardayactive-color: map-get($map: $colors, $key: 'white' )  !default;
+$bt-inputfield-customcalendarheader-paddingleft: 10px !default;
+$bt-inputfield-customcalendarheader-paddingright: 6px !default;
+$bt-inputfield-customcalendarheader-th-fontweight: 400 !default;
+$bt-inputfield-customcalendarheader-th-height: 32px !default;
+$bt-inputfield-customcalendarheader-th-width: 32px !default;
+$bt-inputfield-customcalendarheader-th-verticalalign: bottom !default;
+$bt-inputfield-customcalendartable-width: 100% !default;
+$bt-inputfield-customcalendartable-td-textalign: center !default;
+$bt-inputfield-customcalendartable-month-color: map-get($colors, 'grey1') !default;
+$bt-inputfield-customcalendartable-month-fontsize: 18px !default;
+$bt-inputfield-customcalendartable-month-fontweight: bold !default;
+$bt-inputfield-customcalendartable-month-texttransform: uppercase !default;
+$bt-inputfield-customcalendartable-month-lineheight: 29px !default;
+$bt-inputfield-customcalendartable-callendarrowselected-background: $active-color !default;
+$bt-inputfield-customcalendartable-monthfocus-background: $active-color !default;
+$bt-inputfield-customcalendartable-monthfocus-color: map-get($map: $colors, $key: 'white' )  !default;
+$bt-inputfield-customcalendartable-hr-margin: -$margin 0 !default;
+$bt-inputfield-customcalendaryear-border: 0 !default;
+$bt-inputfield-customcalendaryear-fontsize: 16px !default;
+$bt-inputfield-customcalendardate-width: calc(100% - 50px) !default;
+$bt-inputfield-customcalendardate-content: '\e916' !default;
+$bt-inputfield-customcalendarcontbtner-color: map-get($colors, 'grey1') !important !default;
+$bt-inputfield-customcalendarnative-opacity: 0 !default;
+$bt-inputfield-customcalendartime-content: '\e192' !default;
+$bt-inputfield-customcalendarbg-height: 100vh !default;
+$bt-inputfield-customcalendarbg-width: 100vw !default;
+$bt-inputfield-customcalendarbg-top: 0 !default;
+$bt-inputfield-customcalendarbg-left: 0 !default;
+$bt-inputfield-nolabel-padding: 0 !default;
+$bt-inputfield-password-opacity: 1 !default;
+$bt-text-field-height: 56px !default;
+$bt-text-field-border-bottom-color: #333 !default;
+$bt-text-field-contbtnerborderradius: 0 !default;
+$bt-text-field-label-size-focus: 10px !default;
+$bt-text-field-label-size: 14px !default;
+$bt-text-field-label-color: #333 !default;
+$bt-text-field-label-color-focus: map-get($map: $colors, $key: 'grey1' )   !default;
+$bt-text-field-inputfontsize: 16px !default;
+$bt-text-field-inputheight: 56px !default;
+$bt-text-field-contbtnerpadding: 16px 8px 6px !default;
+$bt-text-field-border: $bt-border-default !default;
+$bt-text-field-inputlineheight: 24px !default;
+$bt-textarea-padding: 24px 8px 16px 8px !default;
+$bt-caption-margin-top: $margin /4 !default;
+$bt-caption-margin-left: $margin /2 !default;
+$bt-input-field-textarea-height: 104px !default;
+$bt-textarea-margin-bottom: $margin /2 !default;
+$bt-input-trbtling-icon-font-size: 16px !default;
+$bt-input-trbtling-icon-padding: 0 !default;
+$bt-input-leading-icon-font-size: 16px !default;
+$bt-input-leading-icon-padding: 4px !default;
+$bt-input-leading-focus-transform: 10px !default;
+$bt-input-leading-span-padding: $margin !default;
+$bt-text-icon-color: map-get($borderRadius, 'grey1') !default;
+$bt-text-icon-font-family: 'Material Icons', sans-serif !default;
+$bt-text-icon-font-size: 24px !default;
+$bt-text-icon-right-pos: 16px !default;
+$bt-text-icon-active-color: $active-color !default;
+$bt-time-icon: '\e192' !default;
+$bt-date-icon: '\e916' !default;
+$bt-textarea-height: 128px !default;
+$bt-inpitmixin-as: flex-end !default;
+$bt-inpitmixin-background: none !default;
+$bt-inpitmixin-border: none !default;
+$bt-inpitmixin-color: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-inpitmixin-fw: 400 !default;
+$bt-inpitmixin-mfia: end !default;
+$bt-inpitmixin-mb: 6px !default;
+$bt-inpitmixin-td: inherit !default;
+$bt-inpitmixin-tt: inherit !default;
+$bt-inpitmixin-appearance: none !default;
+$bt-inpitmixin-br: 0 !default;
+$bt-inpitmixin-transition: opacity 150ms ease !default;
+$bt-inpitmixin-transition1: 0.5s ease !default;
+$bt-inpitmixin-transform: translateY(0) !default;
+
+// Radio and checkboxes
+$bt-radio-material-font-size: 20px !default;
+$bt-radio-default-font-size: 16px !default;
+$bt-radio-icon-padding: 6px !default;
+$bt-radio-icon-margin-fix: -4px !default;
+$bt-radio-label-font-size: 14px !default;
+$bt-radio-label-line-height: 24px !default;
+$bt-checkbox-material-font-size: 20px !default;
+$bt-checkbox-default-font-size: 18px !default;
+$bt-check-icon-padding: 16px /2 !default;
+$bt-check-icon-margin-fix: -4px !default;
+$bt-checkbox-label-font-size: 14px !default;
+$bt-checkbox-label-line-height: 24px !default;
+$bt-radio-check-icon-color: map-get($colors, 'grey1') !default;
+$bt-radio-input-top: 2px !default;
+$bt-radio-input-before-fontweight: 400 !default;
+$bt-radio-native-checked-content: '\e837' !default;
+$bt-radio-native-checked-fontweight: 900 !default;
+$bt-radio-contbtner-marginright: 8px !default;
+$bt-radio-material-before-content: '\e836' !default;
+$bt-radio-default-before-content: '\f111' !default;
+$bt-radio-default-before-fontweight: 900 !default;
+$bt-radio-nativematerial-checked-content:  '\e5ca' !default;
+$bt-radio-nativedefault-checked-content:  '\f14a' !default;
+$bt-check-material-before-content: '\e835' !default;
+$bt-check-default-before-content: '\f0c8' !default;
+$bt-checkradio-before-borderradius: map-get($borderRadius, 'three') !default;
+$bt-checkradio-before-marginright: -($margin / 2) !default;
+
+// Select
+$bt-select-icon-font-size: 24px !default;
+$bt-select-icon-color: map-get($borderRadius, 'grey1') !default;
+$bt-select-icon-right-pos: 16px !default;
+$bt-select-icon-content: '\e313' !default;
+$bt-select-icon-font-family: 'Material Icons', sans-serif !default;
+$bt-select-menu-background: map-get($map: $colors, $key: 'white' )  !default;
+$bt-select-menu-width: 100% !default;
+$bt-select-menu-top: 0px !default;
+
+$bt-select-menu-box-shadow: map-get($boxShadow, 'one') !default;
+$bt-select-menu-li-color: $body-color !default;
+$bt-select-menu-li-background:  map-get($map: $colors, $key: 'white' )  !default;
+$bt-select-menu-li-padding: 12px $margin !default;
+$bt-select-menu-li-background-hover: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-select-menu-li-background-focus: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-select-menu-input-padding-top: 24px !default;
+$bt-select-menu-input-color: map-get($colors, 'black') !default;
+$bt-select-menu-margintop: -56px !default;
+$bt-select-menu-nolabel-padding: 0 !default;
+$bt-select-menu-focus-outline: 0 !default;
+$bt-select-focus-outline: 0 !default;
+
+// Feedback ---
+$bt-feedback-hover-weight: 0.5px 0 0px $body-color, -0.5px 0 0px $body-color  !default;
+$bt-feedback-close-font-size: 16px !default;
+$bt-feedback-close-position: relative !default;
+$bt-feedback-close-valign: middle !default;
+$bt-feedback-close-top: initial !default;
+$bt-feedback-close-right: initial !default;
+$bt-feedback-contbtner-border: $bt-border-default !default;
+$bt-feedback-icon-ml: -8px !default;
+$bt-feedback-iconcontbtneri-fs: 32px !default;
+$bt-feedback-closei-top: 0 !default;
+$bt-feedback-closei-right: 0 !default;
+$bt-feedback-content-color: $body-color !default;
+$bt-feedback-content-fs: 14px !default; 
+$bt-feedback-linkhover-fw: bold !default;
+
+
+// Modal
+$bt-modal-display: grid !default;
+$bt-modal-bt: center !default;
+$bt-modal-top: 0 !default;
+$bt-modal-bottom: 0 !default;
+$bt-modal-left: 0 !default;
+$bt-modal-right: 0 !default;
+$bt-modal-zi: 999 !default;
+$bt-modal-background-background: rgba(map-get($map: $colors, $key: 'grey1' ) , 0.9) !default;
+$bt-modal-background-height: 100vh !default;
+$bt-modal-background-width: 100vw !default;
+$bt-modal-background-zi: 1 !default;
+$bt-modal-close-color: map-get($colors, 'grey1') !default;
+$bt-modal-close-float: right !default;
+$bt-modal-close-padding: 16px !default;
+$bt-modal-close-mt: -20px !default;
+$bt-modal-close-mr: -16px !default;
+$bt-modal-contbtner-background: map-get($map: $colors, $key: 'white' )  !default;
+$bt-modal-contbtner-br: map-get($borderRadius, 'one') !default;
+$bt-modal-contbtner-color: map-get($colors, 'grey1') !default;
+$bt-modal-contbtner-margin: auto !default;
+$bt-modal-contbtner-minwh: 320px !default;
+$bt-modal-contbtner-maxw: 512px !default;
+$bt-modal-contbtner-width: 100% !default;
+$bt-modal-contbtner-zi: 2 !default;
+$bt-modal-content-background: map-get($map: $colors, $key: 'white' )  !default;
+$bt-modal-header-padding: 16px 0 !default;
+$bt-modal-header-fs: 18px !default;
+$bt-modal-header-lh: 24px !default;
+$bt-modal-header-border-bottom: 2px solid map-get($borderRadius, 'grey1') !default;
+$bt-modal-header-tt: uppercase !default;
+$bt-modal-header-margin: 0 !default;
+$bt-modal-header-va: bottom !default;
+$bt-modal-footer-background: map-get($map: $colors, $key: 'white' )  !default;
+$bt-modal-footer-align-items: center !default;
+$bt-modal-footer-display: grid !default;
+$bt-modal-footer-gtc: auto 1fr auto !default;
+$bt-modal-footer-td: none !default;
+$bt-modal-footer-fs: 32px !default;
+$bt-modal-footerhover-background: map-get($map: $colors, $key: 'grey1' )  !default;
+$bt-modal-footerhover-ts: none !important !default;
+$bt-modal-footerdesc-fs: 14px !default;
+$bt-modal-footerdesc-lh: 18px !default;
+$bt-modal-footersec-color: map-get($map: $colors, $key: 'grey1' )  !default;
+
+

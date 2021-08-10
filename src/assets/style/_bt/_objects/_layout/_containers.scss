@@ -1,0 +1,32 @@
+// 
+// containers 
+// 
+// Various containers styles.
+// 
+// Styleguide Objects - Layout - containers
+// 
+
+.btl-containers {
+  &__full-page {
+    // Any thing that uses the full page/window layout should use this.
+
+    &-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    // This 
+  }
+
+  &__content {
+    // Normal content should use this one
+    margin: auto;
+    max-width: 1200px;
+
+    // Media Queries Here
+  }
+  &__800 {
+    margin: auto;
+    max-width: 800px;
+  }
+}

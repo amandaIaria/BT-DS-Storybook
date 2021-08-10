@@ -1,0 +1,141 @@
+// 
+// Textbox, Inputs
+// 
+// A component for the label and input used together.
+// 
+// Label, input, helper text
+// Organism
+// component
+// 
+// A component that includes the label and input, but also helper text
+// 
+// This is organized by type. Input, textarea, etc
+// 
+// Styleguide Components - Molecule - Textbox
+// 
+
+.btc-m-input-field {
+  $self: &;
+  box-sizing: border-box;
+  overflow: visible;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  will-change: opacity, transform, color;
+
+  
+  &__input-contbtner {
+    @extend .btc-a-label__contbtner;
+  }
+
+  &__input {
+    opacity: 0;
+    @extend .btc-a-input;
+    @extend .btc-a-input__input;
+  }
+
+  &__label {
+    @extend .btc-a-label__floating;
+  }
+
+  &__native {
+    opacity: 0;
+  }
+
+  &__textarea-contbtner {
+    @extend .btc-a-label__textarea-contbtner;
+  }
+
+  &__textarea {
+    opacity: 0;
+    @extend .btc-a-input;
+    @extend .btc-a-input__textarea;
+  }
+
+  &--bordered {
+    &#{$self}--focused {
+      border-color: $active-color;
+    }
+    
+    @extend .btc-a-label--bordered;
+  }
+
+
+  &--disabled {
+    color: $active-color;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &--error {
+    @extend .btu-states-error;
+    .btc-o-input-helper__helper {
+      @extend .btu-states-error;
+    }
+  }
+
+  &#{$self}--textarea#{$self} {
+    // float: left;
+  }
+
+  &--inline {
+    clear: both;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    & > * {
+      float: left;
+    }
+  }
+
+  &--no-label {
+    padding: $bt-inputfield-nolabel-padding;
+  }
+
+  &--textarea {
+    min-height: $bt-input-field-textarea-height;
+    margin-bottom: $bt-textarea-margin-bottom;
+    @extend .btc-a-label__textarea-contbtner;
+  }
+
+  &--with-leading-icon {
+    i {
+      font-size: $bt-input-leading-icon-font-size;
+    }
+
+    input {
+      padding-left: $bt-input-leading-icon-padding;
+    }
+
+    &#{$self}--focused {
+      i {
+        transform: translateY($bt-input-leading-focus-transform);
+      }
+    }
+    
+    &:not(#{$self}--focused) { 
+      span {
+        padding-left: $bt-input-leading-span-padding;
+      }
+    }
+  }
+
+  &--with-trbtling-icon {
+    i {
+      font-size: $bt-input-trbtling-icon-font-size;
+      padding: $bt-input-trbtling-icon-padding;
+    }
+  }
+
+  &__input-contbtner:focus,
+  &__input-contbtner:focus-within,
+  &--focused {
+    @extend .btc-a-label--focus-contbtner;
+
+    #{$self}__input,
+    #{$self}__textarea {
+      opacity: 1;
+    }
+  }
+}
