@@ -7,46 +7,32 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+
+  ) { }
 
   ngOnInit(): void {
   }
   
-  /**
-   * Is this the principal call to action on the page?
-   */
-  @Input()
-  primary = false;
 
-  /**
-   * What background color to use
-   */
-  @Input()
-  backgroundColor?: string;
-
-  /**
-   * How large should the button be?
-   */
-  @Input()
-  size: 'small' | 'medium' | 'large' = 'medium';
+  @Input() type?: string;
+  @Input() additionalClasses?: string[];
+  @Input() size?: string = 'default';
 
   /**
    * Button contents
    *
    * @required
    */
-  @Input()
-  label = 'Button';
+  @Input() label?: string = 'label';
 
   /**
    * Optional click handler
    */
-  @Output()
-  onClick = new EventEmitter<Event>();
+  @Output() onClick = new EventEmitter<Event>();
 
   public get classes(): string[] {
-    const mode = this.primary ? 'bt-button--primary' : 'bt-button--secondary';
-
-    return ['bt-button', `bt-button--${this.size}`, mode];
+    return ['btc-a-button', `btc-a-button--${this.size}`, 
+    `btc-a-button--${this.type}`, `${this.additionalClasses}`];
   }
 }

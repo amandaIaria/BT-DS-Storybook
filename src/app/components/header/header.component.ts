@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'bt-header',
@@ -6,10 +6,8 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  constructor() { }
 
   @Input()
   user: unknown = null;
@@ -22,5 +20,8 @@ export class HeaderComponent implements OnInit {
 
   @Output()
   onCreateAccount = new EventEmitter<Event>();
-}
 
+  ngOnInit(): void {
+  }
+
+}

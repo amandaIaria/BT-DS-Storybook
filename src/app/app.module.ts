@@ -16,6 +16,7 @@ import { CheckBoxComponent } from './components/inputs/check-box/check-box.compo
 import { DividerComponent } from './components/divider/divider.component';
 import { IconComponent } from './components/icon/icon.component';
 import { PageComponent } from './components/page/page.component';
+import { TestingComponent } from './pages/testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PageComponent } from './components/page/page.component';
     CheckBoxComponent,
     DividerComponent,
     IconComponent,
-    PageComponent
+    PageComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,

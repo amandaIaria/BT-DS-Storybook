@@ -4,11 +4,8 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { ButtonComponent } from './../app/components/button/button.component';
 
 export default {
-  title: 'Design System/Button',
+  title: 'Components/Button',
   component: ButtonComponent,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as Meta;
 
 const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
@@ -17,12 +14,17 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
+  type: 'primary',
   label: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  label: 'Button',
+};
+
+export const Default = Template.bind({});
+Default.args = {
   label: 'Button',
 };
 
