@@ -5,3 +5,38 @@
 // 
 // Styleguide Components - Atoms - Basics
 // 
+
+// 
+// Basics
+// 
+// Element of the ITCSS
+// 
+// Styleguide Elements
+//
+
+html,
+body {
+  @extend %html;
+}
+
+a {
+  @extend %a;
+}
+
+hr {
+  @extend %hr;
+}
+
+input:invalid {
+  %input:invalid
+}
+
+@for $i from 0 to 7 {
+  h#{$i + 1} {
+    @extend %h#{$i + 1};
+  }
+}
+
+p {
+  @extend %p;
+}

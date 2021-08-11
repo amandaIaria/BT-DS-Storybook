@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { ButtonComponent } from './../app/components/button/button.component';
 
 export default {
-  title: 'Components/Button',
+  title: 'Components/Inputs/Button',
   component: ButtonComponent,
 } as Meta;
 

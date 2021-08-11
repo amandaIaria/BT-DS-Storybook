@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AlertComponent",
-            "id": "component-AlertComponent-f5e30368623304107a9f490fb87ab4f1",
+            "id": "component-AlertComponent-99e4459e79b52c8bcf744ead3201c80e",
             "file": "src/app/components/alert/alert.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -25,7 +25,37 @@
                 "./alert.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "additionalClasses",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "Extra classes",
+                    "description": "<p>Extra classes</p>\n",
+                    "line": 23,
+                    "type": "string[]"
+                },
+                {
+                    "name": "content",
+                    "defaultValue": "'label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "content of the alert",
+                    "description": "<p>content of the alert</p>\n",
+                    "line": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'error'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "Type of alert Error | Success | Info | Caution",
+                    "description": "<p>Type of alert Error | Success | Info | Caution</p>\n",
+                    "line": 18,
+                    "type": "string"
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [
@@ -47,11 +77,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'bt-alert',\n  templateUrl: './alert.component.html',\n  styleUrls: ['./alert.component.scss']\n})\nexport class AlertComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'bt-alert',\n  templateUrl: './alert.component.html',\n  styleUrls: ['./alert.component.scss']\n})\nexport class AlertComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  /**\n   * Type of alert Error | Success | Info | Caution\n   */\n  @Input() type?: string = 'error';\n\n  /**\n   * Extra classes\n   */\n  @Input() additionalClasses?: string[];\n\n  /**\n   * content of the alert\n   */\n  @Input() content?: string = 'label';\n\n  public get classes(): string[] {\n    return ['btc-o-alerts btc-o-alerts__container', `btc-o-alerts--${this.type}`, `${this.additionalClasses}`];\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "@import \n  '../../../assets/style/_bt/_settings/settings',\n  '../../../assets/style/_bt/_tools/tools',\n  '../../../assets/style/_bt/_components/_molecules/alerts';",
                     "styleUrl": "./alert.component.scss"
                 }
             ],
@@ -67,7 +97,18 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>alert works!</p>\n"
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 30
+                    }
+                }
+            },
+            "templateData": "<article class=\"btu-spacing--m-v58\">\n  <div [ngClass]=\"classes\">\n    <div class=\"btc-o-alerts__icon\">\n      <span class=\"material-icons\">\n        {{ type }}\n        </span>\n    </div>\n    <div class=\"btc-o-alerts__content\">\n      {{ content }}\n    </div>\n    <div class=\"btc-o-alerts__close\">\n      <button class=\"btc-a-button btc-a-button--alerts\">\n        <span class=\"material-icons\">\n          close\n          </span>\n      </button>\n    </div>\n  </div>\n</article>\n"
         },
         {
             "name": "AppComponent",
@@ -122,7 +163,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-0ac14ec3c37de1139e4bf32288a3ba1c",
+            "id": "component-ButtonComponent-57a15d5362d0dbc32c070b76abdab232",
             "file": "src/app/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -140,13 +181,11 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "backgroundColor",
+                    "name": "additionalClasses",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "What background color to use",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 24,
-                    "type": "string"
+                    "line": 19,
+                    "type": "string[]"
                 },
                 {
                     "name": "label",
@@ -155,15 +194,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 609,
-                            "end": 622,
+                            "pos": 452,
+                            "end": 465,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 317,
                             "tagName": {
-                                "pos": 610,
-                                "end": 618,
+                                "pos": 453,
+                                "end": 461,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -175,7 +214,7 @@
                     ],
                     "rawdescription": "Button contents",
                     "description": "<p>Button contents</p>\n",
-                    "line": 36,
+                    "line": 27,
                     "type": "string"
                 },
                 {
@@ -183,17 +222,13 @@
                     "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "How large should the button be?",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 29,
+                    "line": 20,
                     "type": "string"
                 },
                 {
                     "name": "type",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "Is this the principal call to action on the page?",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
                     "line": 18,
                     "type": "string"
                 }
@@ -206,7 +241,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nOptional click handler\n",
                     "description": "<p>Optional click handler</p>\n",
-                    "line": 41,
+                    "line": 32,
                     "type": "EventEmitter"
                 }
             ],
@@ -218,7 +253,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 14,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -230,7 +265,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'bt-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n  \n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input() type?: string;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input() size?: string = 'default';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input() label?: string = 'label';\n\n  /**\n   * Optional click handler\n   */\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.type ? 'btc-a-button--primary' : 'btc-a-button--secondary';\n\n    return ['btc-a-button', `btc-a-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'bt-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n\n  constructor(\n\n  ) { }\n\n  ngOnInit(): void {\n  }\n  \n\n  @Input() type?: string;\n  @Input() additionalClasses?: string[];\n  @Input() size?: string = 'default';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input() label?: string = 'label';\n\n  /**\n   * Optional click handler\n   */\n  @Output() onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    return ['btc-a-button', `btc-a-button--${this.size}`, \n    `btc-a-button--${this.type}`, `${this.additionalClasses}`];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -257,11 +292,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 43
+                        "line": 34
                     }
                 }
             },
-            "templateData": "<button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n  <span class=\"btc-a-button__label\">{{ label }}</span>\n</button>\n"
+            "templateData": "<button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n  >\n  <span class=\"btc-a-button__label\">{{ label }}</span>\n</button>\n"
         },
         {
             "name": "CardComponent",
@@ -1123,7 +1158,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<bt-button label=\"This is the label\" type=\"primary\" size=\"small\"></bt-button>\n\n<bt-button></bt-button>\n\n<bt-button label=\"poop\" type=\"secondary\" size=\"medium\"></bt-button>\n\n<bt-button label=\"poop2\" type=\"primary\"></bt-button>\n"
+            "templateData": "<bt-button label=\"This is the label\" type=\"primary\" size=\"small\"></bt-button>\n\n<bt-button></bt-button>\n\n<bt-button label=\"poop\" type=\"secondary\" size=\"medium\"></bt-button>\n\n<bt-button label=\"poop2\" type=\"primary\"></bt-button>\n\n<br>\n\n<bt-alert type=\"error\" content=\"Button\">Content</bt-alert>\n"
         },
         {
             "name": "TextBoxComponent",
@@ -1319,6 +1354,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Caution",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1357,6 +1402,26 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "Error",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Info",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Large",
@@ -1448,6 +1513,26 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Success",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<AlertComponent>",
+                "defaultValue": "(args: AlertComponent) => ({\n  props: args,\n})"
+            },
+            {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1482,6 +1567,58 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/Alert.stories.ts": [
+                {
+                    "name": "Caution",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Error",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Info",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Success",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<AlertComponent>",
+                    "defaultValue": "(args: AlertComponent) => ({\n  props: args,\n})"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -1703,18 +1840,18 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AlertComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
+                "coveragePercent": 50,
+                "coverageCount": "3/6",
+                "status": "medium"
             },
             {
                 "filePath": "src/app/components/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
-                "coveragePercent": 62,
-                "coverageCount": "5/8",
-                "status": "good"
+                "coveragePercent": 25,
+                "coverageCount": "2/8",
+                "status": "low"
             },
             {
                 "filePath": "src/app/components/card/card.component.ts",
@@ -1840,6 +1977,56 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Caution",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Error",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Info",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Success",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Alert.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
