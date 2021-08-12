@@ -1,10 +1,10 @@
 
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { AlertComponent } from 'src/app/components/alert/alert.component';
+import { AlertComponent } from 'src/app/components/molecules/alert/alert.component';
 
 export default {
-  title: 'Components/Organism/Alert',
+  title: 'Components/Molecule/Alert',
   component: AlertComponent,
 } as Meta;
 

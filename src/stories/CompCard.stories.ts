@@ -1,7 +1,7 @@
 
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { CardComponent } from 'src/app/components/card/card.component';
+import { CardComponent } from 'src/app/components/organisms/card/card.component';
 
 export default {
   title: 'Components/Organism/Card',

@@ -1,7 +1,7 @@
 
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { DividerComponent } from 'src/app/components/divider/divider.component';
+import { DividerComponent } from 'src/app/components/atoms/divider/divider.component';
 
 export default {
   title: 'Components/Atoms/Divider',

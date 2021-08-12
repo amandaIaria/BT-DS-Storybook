@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import {ButtonComponent} from '../app/components/button/button.component';
-import {HeaderComponent} from '../app/components/header/header.component';
+import {ButtonComponent} from '../app/components/inputs/button/button.component';
+import {HeaderComponent} from '../app/components/organisms/header/header.component';
 
 export default {
   title: 'Example/Header',
@@ -23,7 +23,6 @@ const Template: Story<HeaderComponent> = (args: HeaderComponent) => ({
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
-  user: {},
 };
 
 export const LoggedOut = Template.bind({});
