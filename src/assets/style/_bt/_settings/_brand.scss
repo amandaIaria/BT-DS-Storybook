@@ -7,7 +7,8 @@ $colors: (
   'blue2': #0CBFEF, 
   'blue3': #08A5D0,
   'red1': #EF0C49,
-  'green1': #05F7B5
+  'green1': #05F7B5,
+  'yellow1': #F8FF41
  ) !default;
  
 $brandColors: (
@@ -25,7 +26,8 @@ $stateColors: (
   'active': map-get($brandColors, 'brightblue' ),
   'error': map-get($colors, 'red1'),
   'success': map-get($colors, 'green1'),
-  'info': map-get($colors, 'blue2')
+  'info': map-get($colors, 'blue2'),
+  'caution': map-get($map: $colors, $key: 'yellow1')
 );
 
 $accentColor: map-get($brandColors, 'brightblue' );

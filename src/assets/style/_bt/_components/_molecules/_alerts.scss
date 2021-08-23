@@ -9,7 +9,7 @@
 .btc-o-alerts {
   box-sizing: border-box;
 
-  &__contbtner {
+  &__container {
     align-items: center;
     width: 100%;
     padding: 2px;
@@ -50,15 +50,20 @@
     padding: 40px 32px;
   }
 
+  &--caution {
+    color: map-get($map: $colors, $key: 'flatblack' );
+    background: map-get($map: $stateColors, $key: 'caution' );
+  }
+
   &--error {
     color: map-get($map: $colors, $key: 'white' );
     background: map-get($map: $stateColors, $key: 'error' );
 
-    i {color: map-get($map: $colors, $key: 'white' );}
+    .material-icons {color: map-get($map: $colors, $key: 'white' );}
   
   }
 
-  &--information {
+  &--info {
     color: map-get($map: $colors, $key: 'flatblack' );
     background: map-get($map: $stateColors, $key: 'info' );
   }
